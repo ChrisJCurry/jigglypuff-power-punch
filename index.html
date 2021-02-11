@@ -14,19 +14,23 @@
 </head>
 
 <body>
-    <header class="justify-content-center text-center">
+    <header class="justify-content-center text-center pt-4">
         <h1>Jigglypuff Power Punch</h1>
     </header>
 
     <main class="container-fluid">
         <div class="row justify-content-center text-center">
-            <div class="col-3">
+            <div class="col-3 pt-3">
                 <h2>Normal</h2>
-                <div class="row ">
-                    <div class="col-12"><button class="btn btn-dark" onclick="getAttack(this)">Punch</button></div>
+                <div class="row">
+                    <div class="col-12 p-2"><button class="btn btn-dark button-glow"
+                            onclick="getAttack(this)">Punch</button></div>
 
-                    <div class="col-12"><button class="btn btn-dark" onclick="getAttack(this)">Inflate</button></div>
-                    <div class="col-12"><button class="btn btn-dark" onclick="getAttack(this)">Rest</button></div>
+                    <div class="col-12 p-2"><button class="btn btn-dark button-glow"
+                            onclick="getAttack(this)">Inflate</button>
+                    </div>
+                    <div class="col-12"><button class="btn btn-dark button-glow" onclick="getAttack(this)">Rest</button>
+                    </div>
                 </div>
             </div>
 
@@ -36,24 +40,28 @@
             </div>
 
 
-            <div class="col-3">
+            <div class="col-3 pt-3">
                 <h2>Fairy</h2>
                 <div class="row ">
-                    <div class="col-12"><button class="btn btn-dark" onclick="getAttack(this)">Sing</button></div>
-                    <div class="col-12"><button class="btn btn-dark" onclick="getAttack(this)">Gleam</button></div>
-                    <div class="col-12"><button class="btn btn-dark" onclick="getAttack(this)">Evolve</button></div>
+                    <div class="col-12 p-2"><button class="btn btn-dark button-glow"
+                            onclick="getAttack(this)">Sing</button></div>
+                    <div class="col-12 p-2"><button class="btn btn-dark button-glow"
+                            onclick="getAttack(this)">Gleam</button></div>
+                    <div class="col-12 p-2"><button class="btn btn-dark button-glow"
+                            onclick="getAttack(this)">Evolve</button>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="row justify-content-center text-center">
-            <progress class="col-6" id="health-bar" value="100" max="100">HP</progress>
+        <div class="row justify-content-center text-center p-3">
+            <div class="col-6 progress-bar-striped rounded" id="health-bar" value="100" max="100">HP</div>
         </div>
         <div class="row justify-content-center text-center">
-            <progress class="col-6" id="stamina-bar" value="100" max="100">Stamina</progress>
+            <div class="col-6 progress-bar-striped rounded" id="stamina-bar" value="100" max="100">Stamina</div>
         </div>
         <div class="row justify-content-center text-center">
-            <div class="col-3">
-                <button class="btn btn-danger"> RESET </button>
+            <div class="col-3 pt-3">
+                <button class="btn btn-danger button-glow"> RESET </button>
             </div>
         </div>
     </main>
