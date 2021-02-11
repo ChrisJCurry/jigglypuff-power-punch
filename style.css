@@ -12,5 +12,11 @@
 
 
 /* red bar for health meter*/
+#health-bar{
+    padding: 0;
+}
 
 /* green bar for speach meter */
+#stamina-bar{
+    padding: 0;
+}
