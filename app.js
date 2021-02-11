@@ -74,6 +74,7 @@ function setImg(action) {
                 <img src="${images["knocked"]}">
             </div>
             `
+            document.getElementById("health-bar").innerText = "Knocked Out"
             break;
         } else if(action.toUpperCase() == imgKey.toUpperCase()) {
             //adds HTML, changes the image
