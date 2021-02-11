@@ -35,20 +35,17 @@ let fairyAttacks = {
 }
 
 function getAttack(attack) {
-    console.log(attack.innerText)
-    setStamina(40)
-}
-
-function setHP(damage) {
-    let healthText = document.getElementById("health-bar")
-    jigglyHP -= damage
-    if(jigglyHP <= 0) {
-        //jiggly is knocked unconscious
-        jiggliesPuffed++
-        jigglyHP = 0
+    let currentAttack = attack.innerText
+    for(let attackKey in normalAttacks) {
+        if(currentAttack.toUpperCase() == attackKey.toUpperCase()) {
+            let damage = normalAttacks[attackKey].damage
+            setHP(damage)
+            //console.log(normalAttacks[attackKey], " --- ", normalAttacks[attackKey].staminaGiven)
+            let stamina = normalAttacks[attackKey].staminaGained
+            //console.log(stamina)
+            setStamina(stamina)
+        }
     }
-
-    healthText.innerText = `${jigglyHP}`
 }
 
 function setImg() {
@@ -63,6 +60,18 @@ function setEvolved(isEvolved) {
     }
 }
 
+function setHP(damage) {
+    let healthBar = document.getElementById("health-bar")
+    jigglyHP -= damage
+    if(jigglyHP <= 0) {
+        //jiggly is knocked unconscious
+        jiggliesPuffed++
+        jigglyHP = 0
+    }
+    healthBar.value -= damage
+    healthBar.innerText = `${jigglyHP}`
+}
+
 function setStamina(staminaGiven) {
     let staminaBar = document.getElementById("stamina-bar")
     userStamina += staminaGiven
@@ -71,7 +80,7 @@ function setStamina(staminaGiven) {
     } else if (userStamina >= 100) {
         userStamina = 100
     }
-    staminaBar.value -= 10
+    staminaBar.value -= staminaGiven
     staminaBar.innerText = `${userStamina}`
 }
 
