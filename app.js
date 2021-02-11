@@ -36,6 +36,7 @@ let fairyAttacks = {
 
 function getAttack(attack) {
     console.log(attack.innerText)
+    setStamina(40)
 }
 
 function setHP(damage) {
