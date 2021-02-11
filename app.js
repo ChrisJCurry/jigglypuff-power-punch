@@ -35,7 +35,7 @@ let fairyAttacks = {
 }
 
 function getAttack(attack) {
-    console.log(attack)
+    console.log(attack.innerText)
 }
 
 function setHP(damage) {
@@ -63,15 +63,15 @@ function setEvolved(isEvolved) {
 }
 
 function setStamina(staminaGiven) {
-    let staminaText = document.getElementById("stamina-bar")
+    let staminaBar = document.getElementById("stamina-bar")
     userStamina += staminaGiven
     if(userStamina <= 0) {
         userStamina = 0
     } else if (userStamina >= 100) {
         userStamina = 100
     }
-
-    staminaText.innerText = `${userStamina}`
+    staminaBar.value -= 10
+    staminaBar.innerText = `${userStamina}`
 }
 
 function reset() {
