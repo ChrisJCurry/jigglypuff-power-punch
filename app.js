@@ -68,9 +68,6 @@ function setImg(action) {
                 <img src="${images[imgKey]}">
             </div>
             `
-            if(action.tolowerCase() == "evolve") {
-                evolveJiggly()
-            }
             break;
         } else {
             //console.log(imgKey, action, " --- did not match")
@@ -85,10 +82,6 @@ function setEvolved(isEvolved) {
     } else { 
         evolved = false
     }
-}
-
-function evolveJiggly() {
-    
 }
 
 function setHP(damage) {
