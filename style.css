@@ -1,7 +1,9 @@
 /* *{
     border: 1px solid red;
 } */
-/* CSS animation for button to expand when hovering */
+.background-title{
+    background-color: rgba(0, 0, 0, 0.39);
+}
 
 /* button colors */
 .glow-button:hover {
@@ -40,4 +42,8 @@ img {
 #stamina-bar{
    background-color: rgb(0, 240, 12);
     color: rgb(0, 0, 0);
+}
+
+.background-img{
+    background-image: url(https://assets.pokemon.com//assets/cms2/img/misc/virtual-backgrounds/sword-shield/pokemon-gym.png);
 }
